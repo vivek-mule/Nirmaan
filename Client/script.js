@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const supabaseUrl = 'https://bxpdmbfmumlrnendmmhf.supabase.co';
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4cGRtYmZtdW1scm5lbmRtbWhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgyMjE4NzUsImV4cCI6MjA1Mzc5Nzg3NX0.eiJauy8c-ntL7gjoIGNuv1z2CtaPAQSwnqcDcqTMbAw';
+    const supabaseUrl = 'API_ENDPOINT';
+    const supabaseKey = 'KEY';
 
     const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
     const loadingDiv = document.getElementById('loading');
