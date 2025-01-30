@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     async function submitPrintJob() {
         try {
-            // Show loading state
             loadingDiv.style.display = 'block';
 
             // Get form values
@@ -79,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error("Error submitting print job:", error);
             alert(error.message || "Error submitting print job. Please try again.");
         } finally {
-            // Hide loading state
             loadingDiv.style.display = 'none';
         }
     }
