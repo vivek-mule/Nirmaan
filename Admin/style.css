@@ -1,0 +1,186 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1500px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    margin: 20px auto;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: white;
+    color: #333;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+}
+
+.navbar-brand h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #6a11cb;
+}
+
+.navbar-actions #logout {
+    background: linear-gradient(135deg, #ff4b5c, #ff6b6b);
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.navbar-actions #logout:hover {
+    background: linear-gradient(135deg, #ff6b6b, #ff4b5c);
+    transform: translateY(-2px);
+}
+
+.navbar-actions #logout i {
+    margin-left: 10px;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button:focus {
+    border-bottom: 3px solid white;
+    transform: translateY(-2px);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #6a11cb;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Approve and Reject Buttons */
+.approve, .reject {
+    cursor: pointer;
+    margin: 5px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.approve {
+    background-color: #28a745;
+}
+
+.approve:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+.reject {
+    background-color: #dc3545;
+}
+
+.reject:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-actions {
+        width: 100%;
+        text-align: right;
+        margin-top: 10px;
+    }
+}
