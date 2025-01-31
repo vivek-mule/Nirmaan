@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const supabaseUrl = 'https://bxpdmbfmumlrnendmmhf.supabase.co';
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ4cGRtYmZtdW1scm5lbmRtbWhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzgyMjE4NzUsImV4cCI6MjA1Mzc5Nzg3NX0.eiJauy8c-ntL7gjoIGNuv1z2CtaPAQSwnqcDcqTMbAw';
+    const supabaseUrl = 'API Endpoint';
+    const supabaseKey = 'API Key';
 
     const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
     const loadingDiv = document.getElementById('loading');
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Function to handle Razorpay payment
     async function handlePayment(amount) {
         const options = {
-            key: 'rzp_test_McUE817z5SK0jW', // Your Razorpay key_id
+            key: 'Razorpay API Key', // Your Razorpay key_id
             amount: amount * 100, // Amount in paise (e.g., ₹100 = 10000 paise)
             currency: 'INR',
             name: 'Print Job Payment',
