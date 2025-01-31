@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Job Submission</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Include Supabase JS -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <!-- Include Razorpay JS -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <!-- Include pdfjs-dist for PDF page counting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Print Job Submission</h2>
+        <form id="printForm">
+            <div class="form-group">
+                <label for="name"><i class="fas fa-user"></i> Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone"><i class="fas fa-phone"></i> Phone Number:</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="file"><i class="fas fa-file-upload"></i> Upload File:</label>
+                <input type="file" id="file" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pages"><i class="fas fa-copy"></i> Number of Pages in Document:</label>
+                <input type="number" id="pages" min="1" value="1" required readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="colour"><i class="fas fa-palette"></i> Select Colour:</label>
+                <select id="colour">
+                    <option value="Black and white">Black and white</option>
+                    <option value="colour">Colour</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="copies"><i class="fas fa-copy"></i> Number of Copies:</label>
+                <input type="number" id="copies" min="1" value="1" required>
+            </div>
+
+            <!-- Razorpay Payment Button -->
+            <button type="button" id="payButton">Pay with Razorpay <i class="fas fa-arrow-right"></i></button>
+
+            <!-- Submit Button (Hidden Initially) -->
+            <button type="button" id="submitButton" style="display: none;">Submit Print Job <i class="fas fa-arrow-right"></i></button>
+        </form>
+        <div id="loading" class="loading"></div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
