@@ -3,7 +3,7 @@ const cors = require('cors');
 const { Resend } = require('resend');
 
 const app = express();
-const resend = new Resend('re_idhngGZa_KUvvxSZfMv7zqQTw1LbvESaG'); // Your Resend API key
+const resend = new Resend('Resend API'); // Your Resend API key
 
 app.use(cors({
     origin: 'http://localhost:5500', // Replace with your frontend URL
