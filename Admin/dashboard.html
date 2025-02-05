@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Include Supabase JS -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <h1>Print Request Management</h1>
+        </div>
+        <div class="navbar-actions">
+            <button id="logout">Logout <i class="fas fa-sign-out-alt"></i></button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Filter Buttons -->
+        <div class="filter-buttons">
+            <button id="newRequestsButton">New Requests</button>
+            <button id="acceptedRequestsButton">Accepted Requests</button>
+            <button id="rejectedRequestsButton">Rejected Requests</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Phone Number</th>
+                    <th>File</th>
+                    <th>Number of Pages</th>
+                    <th>Colour</th>
+                    <th>Copies</th>
+                    <th>Status</th>
+                    <th>Payment Amount</th>
+                    <th>Payment ID</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="requestTableBody">
+                <tr><td colspan="10">Loading...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
